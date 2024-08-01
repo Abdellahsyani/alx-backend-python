@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''function to return the list of floats'''
-from typing import list
+from typing import List
 
 
 def sum_list(input_list: list) -> float:
