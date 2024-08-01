@@ -3,9 +3,9 @@
 from typing import List
 
 
-def sum_list(input_list: list) -> float:
+def sum_list(input_list: List[float]) -> float:
     '''return the sum of float list '''
     summ = 0
     for i in input_list:
         summ += i
-    return (float(summ))
+    return (summ)
