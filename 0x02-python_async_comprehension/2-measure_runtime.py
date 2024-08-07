@@ -7,11 +7,10 @@ import time
 async_comprehension = __import__('user').async_comprehension
 
 
-async def measure_runtime():
+async def measure_runtime() -> float:
     '''return the total time that the parallel take to run'''
     start_time = time.time()
 
-    tasks = [async_comprehension() for _ in range(4)]
-    result = await asyncio.gather(*tasks)
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
 
     return time.time() - start_time
